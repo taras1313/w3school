@@ -628,3 +628,25 @@ nav {
 }
 
 /*чого юл появляється зліва направо а бекграунд просто з фону*/
+
+#test_id {
+	position: relative;
+}
+
+
+#test_dd {
+	width: 0;
+	height: 0;
+	/*overflow: hidden;*/
+	position: absolute;
+	left: 200px;
+	
+
+}
+
+#test_id:hover #test_dd {
+	transition: .4s;
+	height: auto;
+	width: 200px;
+	background: rgb(0, 0, 0, 0.9);
+}
