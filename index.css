@@ -503,17 +503,19 @@ nav>ul {
 }
 
 nav>ul li:hover img {
-	visibility: hidden;
+	/*visibility: hidden;*/
+	display: none;
 }
 
 nav>ul, nav>ul li ul li:nth-child(2), nav>ul li ul li:nth-child(1), .drop_down2 li:first-child  {
 	position: relative;
 }
 
-.p-l-16 {
-	padding-left: 16px;
-}
+/*.p-l-16 {*/
+/*	padding-left: 16px;*/
+/*}*/
 /*чому без нього з*їжджає другий елемент*/
+/*take look on inheritance*/
 
 nav ul a {
 	display: inline;
@@ -580,19 +582,16 @@ nav>ul li:first-child:hover .drop_down {
 nav>ul li  {
 	transition: .4s;
 	width: 177px;
-	height: 57px;
+	/*width: 200px;*/
+	/*height: 57px;*/
 }
 nav>ul li:hover {
-	/*margin-right: 30px;*/
 	width: 200px;
 	transition: .4s;
-
 }
 
-
-
-nav {
-	height: 57px;
+nav>ul>li:hover {
+	text-align: center;
 }
 
 .overflow_test {
@@ -603,28 +602,24 @@ nav {
 	height: 0;
 	width: 0;
 	overflow: hidden;
+	background: black;
+	color: white;
+	position: absolute;
+	top: 57px;
+	left: 0;
 }
-
-/*схлопнув блок ul аби лі вивалились*/
 
 .overflow_test:hover .overflow {
 	transition: .4s;
 	height: auto;
 	width: 200px;
 	background: rgb(0, 0, 0, 0.9);
+	overflow: visible;
 }
 
 .overflow li:hover {
 	background-color: #3a3a3a;
 	color: white;
-}
-
-.overflow {
-	background: black;
-	color: white;
-	position: absolute;
-	top: 57px;
-	left: 0;
 }
 
 /*чого юл появляється зліва направо а бекграунд просто з фону*/
@@ -633,15 +628,13 @@ nav {
 	position: relative;
 }
 
-
 #test_dd {
 	width: 0;
 	height: 0;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	position: absolute;
-	left: 200px;
-	
-
+	left: 196px;
+	top: 0;
 }
 
 #test_id:hover #test_dd {
