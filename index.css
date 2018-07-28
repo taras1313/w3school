@@ -214,7 +214,7 @@ nav li {
 	display: inline-block;
 	padding: 16px 8px;
 	font-size: 17px;
-	margin-right: 8px;
+	/*margin-right: 8px;*/
 	
 }
 
@@ -308,7 +308,7 @@ section p {
 
 .code_holder {
 	padding: 16px;
-	margin: 30px 0 0 31px;
+	margin: 3%;
 }
 
 .code_holder h2 {
@@ -498,8 +498,8 @@ footer img {
 
 
 nav>ul {
-	word-spacing: -13px;
-	margin-right: 12px;
+	word-spacing: -8px;
+	/*margin-right: 12px;*/
 }
 
 nav>ul li:hover img {
@@ -514,8 +514,7 @@ nav>ul, nav>ul li ul li:nth-child(2), nav>ul li ul li:nth-child(1), .drop_down2 
 /*.p-l-16 {*/
 /*	padding-left: 16px;*/
 /*}*/
-/*чому без нього з*їжджає другий елемент*/
-/*take look on inheritance*/
+
 
 nav ul a {
 	display: inline;
@@ -581,16 +580,16 @@ nav>ul li:first-child:hover .drop_down {
 
 nav>ul li  {
 	transition: .4s;
-	width: 177px;
+	/*width: auto;*/
+	width: 185px;
 	/*width: 200px;*/
-	/*height: 57px;*/
 }
 nav>ul li:hover {
 	width: 200px;
 	transition: .4s;
 }
 
-nav>ul>li:hover {
+nav>ul>li:nth-child(1):hover, nav>ul>li:nth-child(2):hover, nav>ul>li:nth-child(3):hover {
 	text-align: center;
 }
 
@@ -610,7 +609,7 @@ nav>ul>li:hover {
 }
 
 .overflow_test:hover .overflow {
-	transition: .4s;
+	transition: .3s;
 	height: auto;
 	width: 200px;
 	background: rgb(0, 0, 0, 0.9);
@@ -622,13 +621,15 @@ nav>ul>li:hover {
 	color: white;
 }
 
-/*чого юл появляється зліва направо а бекграунд просто з фону*/
+.overflow li {
+	text-align: left;
+}
 
-#test_id {
+#test_id, #test_id2 {
 	position: relative;
 }
 
-#test_dd {
+#test_dd, #test_dd2 {
 	width: 0;
 	height: 0;
 	overflow: hidden;
@@ -637,9 +638,13 @@ nav>ul>li:hover {
 	top: 0;
 }
 
-#test_id:hover #test_dd {
+#test_id:hover #test_dd, #test_id2:hover #test_dd2 {
 	transition: .4s;
 	height: auto;
 	width: 200px;
 	background: rgb(0, 0, 0, 0.9);
+	overflow: visible;
 }
+
+
+/*випадання в лінуксі попробувати фіксити забравши педінг або ширину*/
